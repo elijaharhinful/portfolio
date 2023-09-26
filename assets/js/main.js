@@ -68,27 +68,27 @@ tabs.forEach((tab) => {
 });
 
 /*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll(".services__modal");
-const modalBtns = document.querySelectorAll(".services__button");
-const modalCloses = document.querySelectorAll(".services__modal-close");
+// const modalViews = document.querySelectorAll(".services__modal");
+// const modalBtns = document.querySelectorAll(".services__button");
+// const modalCloses = document.querySelectorAll(".services__modal-close");
 
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
+// let modal = function (modalClick) {
+//   modalViews[modalClick].classList.add("active-modal");
+// };
 
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener("click", () => {
-    modal(i);
-  });
-});
+// modalBtns.forEach((modalBtn, i) => {
+//   modalBtn.addEventListener("click", () => {
+//     modal(i);
+//   });
+// });
 
-modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener("click", () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal");
-    });
-  });
-});
+// modalCloses.forEach((modalClose) => {
+//   modalClose.addEventListener("click", () => {
+//     modalViews.forEach((modalView) => {
+//       modalView.classList.remove("active-modal");
+//     });
+//   });
+// });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper(".swiper-container", {
@@ -202,18 +202,18 @@ themeButton.addEventListener('click', () => {
 })
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-// const sr = ScrollReveal({
-//   origin: 'top',
-//   distance: '30px',
-//   duration: 2000,
-//   reset: true
-// });
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 2000,
+  reset: true
+});
 
-// sr.reveal(`.home__data, .home__img,
-//           .about__data, .about__img,
-//           .services__content, .menu__content,
-//           .app__data, .app__img,
-//           .contact__data, .contact__button,
-//           .footer__content`, {
-//   interval: 200
-// })
+sr.reveal(`.home__data, .home__img,
+          .about__data, .about__img,
+          .services__content, .menu__content,
+          .app__data, .app__img,
+          .contact__data, .contact__button,.portfolio__content,
+          .footer__content`, {
+  interval: 200
+})
